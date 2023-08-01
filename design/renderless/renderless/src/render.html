@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- {{ message }} -->
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          message : 'Hello Vue!!'
+        }
+      },
+      //template: '<p>{{ message }}</p>',
+      render(createElement) {
+        // return createElement('태그 이름', '태그 속성', '하위 태그 내용')
+        return createElement('h3', this.message)
+      }
+    })
+  </script>
+</body>
+</html>
